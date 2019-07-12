@@ -2,7 +2,7 @@
 
 `/proc/meminfo`에 `Dirty`라고 표시된 부분
 
-![cat /proc/meminfo 이미지삽입](image10-00.png)
+![cat /proc/meminfo 이미지삽입](/image/image10-00.png)
 
 ## dirty page란?
 
@@ -22,7 +22,7 @@ Kernel 버전마다 다르지만, 보통 `page writeback`을 수행하는 thread
 
 ## dirty page 관련 kernel parameters
 
-![sysctl -a | grep -i dirty 결과](image10-01.png)
+![sysctl -a | grep -i dirty 결과](/image/image10-01.png)
 책에는 파라미터 개수가 6개라고 했는데 Ubuntu 16.04 kernel 버전 4.4.0 기준으로 7개임을 확인함. (책은 3.10.0 버전으로 추정)
 
 ### vm.dirty_background_ratio
@@ -53,11 +53,11 @@ Kernel 버전마다 다르지만, 보통 `page writeback`을 수행하는 thread
 
 ### vm.dirtytime_expire_seconds
 
-![kernel/sysctl.c 중](image10-02.png)  
+![kernel/sysctl.c 중](/image/image10-02.png)  
 linux-4.4.y 브랜치 kernel/sysctl.c 중
 
 
-![fs/fs-writeback.c 중](image10-03.png)  
+![fs/fs-writeback.c 중](/image/image10-03.png)  
 linux-4.4.y 브랜치 fs/fs-writeback.c 중
 
 inode timestamps와 관계 있는 건 알겠는데 `dirtytime`이 정확히 뭔지 모르겠다. 찾아봐도 친절한 설명이 없음...
